@@ -33,12 +33,13 @@ def adivinhe():
                 st.image(img_redim, caption=animal_aleatorio.name)
 
             else:
-                st.error(
-                    f"Uepa! tá errado amigão, a resposta correta era: {animal_aleatorio.name}"
-                )
+                st.error(f"Uepa! tá errado amigão, tente novamente!!")
 
         else:
             st.warning("Por favor, insira uma resposta antes de verificar.")
+
+    if st.button("Desistir"):
+        st.error(f"A resposta correta era: {animal_aleatorio.name}")
 
 
 # Função principal do aplicativo Streamlit
