@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="file:///home/thmarques/Projetos/6º periodo/IA/adivinhar_animais_ontologia/adivinha_animal.owl"
+         xmlns="file:///home/thmarques/Projetos/6º periodo/IA/adivinhar_animais_ontologia/adivinha_animal.owl#">
+
+<owl:Ontology rdf:about="file:///home/thmarques/Projetos/6º periodo/IA/adivinhar_animais_ontologia/adivinha_animal.owl"/>
+
+<owl:ObjectProperty rdf:about="#temCor">
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Cor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#viveEm">
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Habitat"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#temTipoPele">
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Pele"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#seAlimenta">
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Alimento"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Animal">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Peixe">
+  <rdfs:subClassOf rdf:resource="#Animal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Anfibio">
+  <rdfs:subClassOf rdf:resource="#Animal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Reptil">
+  <rdfs:subClassOf rdf:resource="#Animal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Mamifero">
+  <rdfs:subClassOf rdf:resource="#Animal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Ave">
+  <rdfs:subClassOf rdf:resource="#Animal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#caracFisica">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cor">
+  <rdfs:subClassOf rdf:resource="#caracFisica"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Habitat">
+  <rdfs:subClassOf rdf:resource="#caracFisica"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Pele">
+  <rdfs:subClassOf rdf:resource="#caracFisica"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Alimento">
+  <rdfs:subClassOf rdf:resource="#caracFisica"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#Leão">
+  <rdf:type rdf:resource="#Mamifero"/>
+  <temCor rdf:resource="#amarela"/>
+  <viveEm rdf:resource="#selva"/>
+  <temTipoPele rdf:resource="#lisa"/>
+  <seAlimenta rdf:resource="#roedores, zebras, gnus e carcaças de vários outros animais"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#amarela">
+  <rdf:type rdf:resource="#Cor"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#selva">
+  <rdf:type rdf:resource="#Habitat"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lisa">
+  <rdf:type rdf:resource="#Pele"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roedores, zebras, gnus e carcaças de vários outros animais">
+  <rdf:type rdf:resource="#Alimento"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tubarão tigre">
+  <rdf:type rdf:resource="#Peixe"/>
+  <temCor rdf:resource="#cinza com manchas escuras verticais"/>
+  <viveEm rdf:resource="#oceano"/>
+  <temTipoPele rdf:resource="#áspera recoberta por escamas placoides"/>
+  <seAlimenta rdf:resource="#lulas, tartarugas, focas e peixes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#cinza com manchas escuras verticais">
+  <rdf:type rdf:resource="#Cor"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#oceano">
+  <rdf:type rdf:resource="#Habitat"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#áspera recoberta por escamas placoides">
+  <rdf:type rdf:resource="#Pele"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lulas, tartarugas, focas e peixes">
+  <rdf:type rdf:resource="#Alimento"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sapo cururu">
+  <rdf:type rdf:resource="#Anfibio"/>
+  <temCor rdf:resource="#marrom em fêmeas, e amarelo-pardo em machos"/>
+  <viveEm rdf:resource="#florestas, lagos, jardins e rios"/>
+  <temTipoPele rdf:resource="#grossa, rugosa e úmida"/>
+  <seAlimenta rdf:resource="#insetos, camundongos, cobras e caracóis"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#marrom em fêmeas, e amarelo-pardo em machos">
+  <rdf:type rdf:resource="#Cor"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#florestas, lagos, jardins e rios">
+  <rdf:type rdf:resource="#Habitat"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#grossa, rugosa e úmida">
+  <rdf:type rdf:resource="#Pele"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#insetos, camundongos, cobras e caracóis">
+  <rdf:type rdf:resource="#Alimento"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sucuri">
+  <rdf:type rdf:resource="#Reptil"/>
+  <temCor rdf:resource="#verde-oliva com manchas dorsais marrom com bordas pretas"/>
+  <viveEm rdf:resource="#rios, lagos, pântanos e brejos"/>
+  <temTipoPele rdf:resource="#seca e com escamas"/>
+  <seAlimenta rdf:resource="#tartarugas, jacarés, aves, peixes, capivaras, animais domésticos e até mesmo onças"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#verde-oliva com manchas dorsais marrom com bordas pretas">
+  <rdf:type rdf:resource="#Cor"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#rios, lagos, pântanos e brejos">
+  <rdf:type rdf:resource="#Habitat"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#seca e com escamas">
+  <rdf:type rdf:resource="#Pele"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#tartarugas, jacarés, aves, peixes, capivaras, animais domésticos e até mesmo onças">
+  <rdf:type rdf:resource="#Alimento"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Arara azul">
+  <rdf:type rdf:resource="#Ave"/>
+  <temCor rdf:resource="#azul cobalto com um anel de cor amarela ao redor dos olhos e na boca"/>
+  <viveEm rdf:resource="#florestas úmidas, em árvores como palmeiras e buritizais"/>
+  <temTipoPele rdf:resource="#recoberto de penas"/>
+  <seAlimenta rdf:resource="# frutos como: buriti, licuri e macaúba"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#azul cobalto com um anel de cor amarela ao redor dos olhos e na boca">
+  <rdf:type rdf:resource="#Cor"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#florestas úmidas, em árvores como palmeiras e buritizais">
+  <rdf:type rdf:resource="#Habitat"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#recoberto de penas">
+  <rdf:type rdf:resource="#Pele"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="# frutos como: buriti, licuri e macaúba">
+  <rdf:type rdf:resource="#Alimento"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
