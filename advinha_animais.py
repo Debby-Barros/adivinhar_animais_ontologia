@@ -13,10 +13,11 @@ def adivinhe():
     # Front com Streamlit
     st.title("Adivinhe o animal!")
 
-    st.write(gerar_descricao(animal_aleatorio))
-
     if st.button("Alterar animal"):
         set_trocar_animal(True)
+        animal_aleatorio = escolher_animal()
+
+    st.write(gerar_descricao(animal_aleatorio))
 
     # input do usuário
     resp_usuario = st.text_input("Qual é o animal?")
