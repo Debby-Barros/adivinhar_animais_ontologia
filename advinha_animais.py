@@ -3,6 +3,7 @@ import streamlit as st
 from PIL import Image
 
 from gerar_animal import escolher_animal, gerar_descricao, set_trocar_animal
+from gerar_comentario import comentario
 
 
 animal_aleatorio = escolher_animal()
@@ -32,6 +33,8 @@ def adivinhe():
                 imagem = Image.open(f"img/{animal_aleatorio.name.lower()}.jpg")
                 img_redim = imagem.resize(tamanho_redimensionado)
                 st.image(img_redim, caption=animal_aleatorio.name)
+
+                comentario()
 
             else:
                 st.error(f"Uepa! tá errado amigão, tente novamente!!")
